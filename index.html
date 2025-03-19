@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravid AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&family=Shabnam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="sidebar">
+      <div class="logo">
+        <i class="fas fa-robot"></i>
+        <span>Ravid AI</span>
+      </div>
+      <div class="sidebar-options">
+        <button class="option active" aria-label="گفتگوی جدید"><i class="fas fa-comment"></i> گفتگوی جدید</button>
+        <button class="option" aria-label="تاریخچه"><i class="fas fa-history"></i> تاریخچه</button>
+        <button class="option" aria-label="تنظیمات"><i class="fas fa-cog"></i> تنظیمات</button>
+      </div>
+      <div class="theme-toggle">
+        <button id="themeToggle" aria-label="تغییر تم"><i class="fas fa-moon"></i> حالت شب</button>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="chat-header">
+        <div class="chat-title">
+          <h1>گفتگوی جدید</h1>
+          <span class="status online">آنلاین</span>
+        </div>
+        <div class="header-actions">
+          <button class="clear-chat" aria-label="پاک کردن گفتگو"><i class="fas fa-trash-alt"></i></button>
+          <button class="mobile-menu" aria-label="منوی موبایل"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+      
+      <div class="chat-container">
+        <div class="chat-area" id="chatArea">
+          </div>
+        
+        <div class="loading" id="loading">
+          <div class="loading-spinner">
+            <i class="fas fa-circle-notch fa-spin"></i>
+          </div>
+          <span>در حال پردازش...</span>
+        </div>
+        
+        <div class="input-container">
+          <div class="input-area">
+            <input type="text" id="userInput" placeholder="پیام خود را بنویسید..." aria-label="پیام خود را بنویسید">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;" aria-label="انتخاب تصویر">
+            <div class="input-actions">
+              <button class="attach-file" id="attachFileBtn" aria-label="پیوست فایل"><i class="fas fa-paperclip"></i></button>
+              <button class="send-message" onclick="sendMessage()" aria-label="ارسال پیام"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+          <div class="input-suggestions">
+            <button class="suggestion">سلام، چطور می‌توانم کمک کنم؟</button>
+            <button class="suggestion">اطلاعاتی درباره محصولات</button>
+            <button class="suggestion">با پشتیبانی تماس بگیرم</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
